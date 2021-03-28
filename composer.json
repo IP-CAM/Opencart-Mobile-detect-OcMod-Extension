@@ -1,0 +1,13 @@
+{
+	"name": "kotygor/opencart-mobile-detect",
+	"description": "Opencart Mobile_Detect",
+	"type": "opencart-extension",
+	"extra": {
+		"installers":{
+			"xml": "install.xml"
+		}
+	},
+	"require": {
+		"mobiledetect/mobiledetectlib": "^2.8"
+	}
+}

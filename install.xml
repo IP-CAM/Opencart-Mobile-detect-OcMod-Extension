@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+	<name>Opencart Mobile detect module</name>
+	<version>1</version>
+	<author>JD</author>
+	<link>zelenuj@gmail.com</link>
+	<code>Opencart Mobile detect module</code>
+	<file path="system/framework.php">
+		<operation>
+			<search><![CDATA[
+            <?php
+            ]]></search>
+			<add position="after"><![CDATA[
+// <<< Mobile detect by opencart-mobile-detect.ocmod.xml
+$mobile_detect = new Mobile_Detect;
+if ( $mobile_detect->isMobile() ) {
+	define('IS_MOBILE', true);
+} else define('IS_MOBILE', false);
+// >>> Mobile detect by opencart-mobile-detect.ocmod.xml
+            ]]></add>
+		</operation>
+	</file>
+</modification>
