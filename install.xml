@@ -20,4 +20,21 @@ if ( $mobile_detect->isMobile() ) {
             ]]></add>
 		</operation>
 	</file>
+
+	<!-- Controller include template -->
+	<_file path="catalog/controller/product/product.php">
+		<operation>
+			<search><![CDATA[
+		    public function index() {
+		    ]]></search>
+			<add position="after"><![CDATA[
+		// << www\system\kotygor_dm_ext.ocmod.xml
+		if(defined('IS_MOBILE') && IS_MOBILE) {
+			$data['is_mobile'] = true;
+		}
+		// >> www\system\kotygor_dm_ext.ocmod.xml
+		    ]]></add>
+		</operation>
+	</_file>
+
 </modification>
